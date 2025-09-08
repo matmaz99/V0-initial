@@ -1,30 +1,167 @@
-# Hello world page
+# Streetview Game
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+A modern web-based streetview guessing game built with Next.js and React, featuring an intuitive UI powered by shadcn/ui components.
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/matmaz99s-projects/v0-hello-world-page)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/uqA2RRLcynn)
+## 🏗️ Project Architecture
 
-## Overview
+### Tech Stack
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+**Frontend Framework**
+- **Next.js 15.2.4** - React framework with App Router
+- **React 19** - UI library with latest features
+- **TypeScript 5** - Type safety and enhanced developer experience
 
-## Deployment
+**Styling & UI**
+- **Tailwind CSS 4.1.9** - Utility-first CSS framework
+- **shadcn/ui** - High-quality, accessible React components
+- **Radix UI** - Low-level UI primitives for complex components
+- **Geist Font** - Modern typography (Sans & Mono)
+- **next-themes** - Dark/light theme support
 
-Your project is live at:
+**Development Tools**
+- **ESLint** - Code linting and quality
+- **PostCSS** - CSS processing
+- **pnpm** - Fast, disk space efficient package manager
 
-**[https://vercel.com/matmaz99s-projects/v0-hello-world-page](https://vercel.com/matmaz99s-projects/v0-hello-world-page)**
+### 📁 Project Structure
 
-## Build your app
+```
+streetview-game/
+├── app/                    # Next.js App Router
+│   ├── globals.css        # Global styles and CSS variables
+│   ├── layout.tsx         # Root layout with fonts and metadata
+│   └── page.tsx           # Home page component
+├── components/            # Reusable React components
+│   ├── ui/               # shadcn/ui components (auto-generated)
+│   └── theme-provider.tsx # Theme context provider
+├── lib/                  # Utility functions and configurations
+│   └── utils.ts          # Common utilities (cn function for styling)
+├── public/               # Static assets
+│   ├── placeholder-*.png # Placeholder images
+│   └── *.svg            # SVG assets
+├── styles/              # Additional stylesheets
+│   └── globals.css      # Legacy global styles
+├── components.json      # shadcn/ui configuration
+├── next.config.mjs      # Next.js configuration
+├── package.json         # Dependencies and scripts
+├── postcss.config.mjs   # PostCSS configuration
+├── tsconfig.json        # TypeScript configuration
+└── pnpm-lock.yaml       # Dependency lock file
+```
 
-Continue building your app on:
+### 🔧 Architecture Patterns
 
-**[https://v0.dev/chat/projects/uqA2RRLcynn](https://v0.dev/chat/projects/uqA2RRLcynn)**
+**Component Architecture**
+- **Atomic Design**: Components organized by complexity and reusability
+- **Composition Pattern**: Using shadcn/ui's composable component system
+- **Server/Client Components**: Leveraging Next.js App Router's hybrid rendering
 
-## How It Works
+**Styling Architecture**
+- **Design System**: Consistent theming with CSS variables
+- **Utility-First**: Tailwind CSS for rapid UI development
+- **Component Variants**: Using `class-variance-authority` for component variations
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+**Type Safety**
+- **Strict TypeScript**: Full type coverage across the application
+- **Path Aliases**: Clean imports using `@/*` mapping
+- **Component Props**: Strongly typed component interfaces
+
+### 🎯 Key Features (Planned)
+
+- **Interactive Streetview Game**: Location guessing gameplay
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Theme Support**: Light/dark mode toggle
+- **Modern UI**: Clean, accessible interface with shadcn/ui
+- **Performance Optimized**: Next.js optimizations and image handling
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- **Node.js** 18.17 or later
+- **pnpm** (recommended) or npm
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/matmaz99/streetview-game.git
+   cd streetview-game
+   ```
+
+2. **Install dependencies**
+   ```bash
+   pnpm install
+   ```
+
+3. **Start development server**
+   ```bash
+   pnpm dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+### Available Scripts
+
+```bash
+pnpm dev      # Start development server
+pnpm build    # Build for production
+pnpm start    # Start production server
+pnpm lint     # Run ESLint
+```
+
+## 🛠️ Development
+
+### Adding New Components
+
+This project uses shadcn/ui for components. To add new components:
+
+```bash
+npx shadcn-ui@latest add [component-name]
+```
+
+### Project Configuration
+
+- **shadcn/ui**: Configured with New York style, CSS variables, and Lucide icons
+- **Path Aliases**: `@/*` maps to project root for clean imports
+- **TypeScript**: Strict mode enabled with Next.js plugin
+- **Tailwind**: Custom configuration with shadcn/ui integration
+
+### Theme System
+
+The project supports light/dark themes using:
+- `next-themes` for theme switching
+- CSS variables for consistent theming
+- Tailwind dark mode utilities
+
+## 📦 Dependencies Overview
+
+### Core Dependencies
+- **React Ecosystem**: React 19, React DOM, React Hook Form
+- **UI Components**: Full Radix UI suite for accessibility
+- **Styling**: Tailwind CSS with animation support
+- **Utilities**: clsx, tailwind-merge for conditional styling
+- **Icons**: Lucide React for consistent iconography
+
+### Development Dependencies
+- **TypeScript**: Full type definitions for React and Node
+- **Build Tools**: PostCSS, Tailwind CSS compiler
+- **Animations**: Custom animation utilities
+
+## 🔮 Future Enhancements
+
+- Game logic implementation
+- Google Street View API integration
+- Score tracking and leaderboards
+- Multiplayer functionality
+- Progressive Web App (PWA) features
+- Internationalization (i18n)
+
+## 📄 License
+
+This project is private and proprietary.
+
+---
+
+Built with ❤️ using modern web technologies
